@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SciBase | Massive Science Simulation Base</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>SciBase</h1>
+    <p>Massive science simulation base with discoverable HTML experiments.</p>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Filter & Sort</h2>
+
+      <section class="control-group">
+        <label for="domain-filter">Domain</label>
+        <select id="domain-filter">
+          <option value="all">All domains</option>
+          <option value="physics">Physics</option>
+          <option value="chemistry">Chemistry</option>
+          <option value="biology">Biology</option>
+          <option value="astronomy">Astronomy</option>
+        </select>
+      </section>
+
+      <section class="control-group">
+        <label for="sort-order">Sort by</label>
+        <select id="sort-order">
+          <option value="name-asc">Name (A–Z)</option>
+          <option value="name-desc">Name (Z–A)</option>
+          <option value="tag-count">Most tags</option>
+        </select>
+      </section>
+
+      <section class="control-group">
+        <h3>Tags</h3>
+        <div class="tag-list">
+          <label><input type="checkbox" class="tag-filter" value="interactive" /> Interactive</label>
+          <label><input type="checkbox" class="tag-filter" value="3d" /> 3D</label>
+          <label><input type="checkbox" class="tag-filter" value="data-viz" /> Data Viz</label>
+          <label><input type="checkbox" class="tag-filter" value="education" /> Education</label>
+          <label><input type="checkbox" class="tag-filter" value="advanced" /> Advanced</label>
+        </div>
+      </section>
+    </aside>
+
+    <section>
+      <div class="sim-grid" id="sim-grid">
+        <article class="sim-card" data-domain="physics" data-tags="interactive 3d education" data-name="Particle Collider Sandbox">
+          <a href="particle-collider.html">
+            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=900&q=80" alt="Particle collider visualization" />
+            <h2>Particle Collider Sandbox</h2>
+            <p>Explore high-energy particle trajectories, collision outcomes, and detector readouts in real time.</p>
+          </a>
+        </article>
+
+        <article class="sim-card" data-domain="chemistry" data-tags="interactive data-viz education" data-name="Molecular Reaction Lab">
+          <a href="molecular-reaction-lab.html">
+            <img src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=900&q=80" alt="Chemistry glassware in laboratory" />
+            <h2>Molecular Reaction Lab</h2>
+            <p>Build compounds, tune temperatures, and observe kinetics and energy curves for custom reactions.</p>
+          </a>
+        </article>
+
+        <article class="sim-card" data-domain="astronomy" data-tags="3d advanced data-viz" data-name="Orbital Mechanics Viewer">
+          <a href="orbital-mechanics-viewer.html">
+            <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80" alt="Deep space field with stars" />
+            <h2>Orbital Mechanics Viewer</h2>
+            <p>Simulate multi-body orbital systems with adjustable mass, velocity, and gravity integration models.</p>
+          </a>
+        </article>
+
+        <article class="sim-card" data-domain="biology" data-tags="interactive education data-viz" data-name="Ecosystem Dynamics Studio">
+          <a href="ecosystem-dynamics-studio.html">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Forest canopy scene" />
+            <h2>Ecosystem Dynamics Studio</h2>
+            <p>Model predator-prey cycles, resource limits, and climate shocks to test ecosystem resilience.</p>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom-bar" aria-label="SciBase footer links">
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html">Donate</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
